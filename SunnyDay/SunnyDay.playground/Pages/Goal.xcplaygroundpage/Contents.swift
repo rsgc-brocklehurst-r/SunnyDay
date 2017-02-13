@@ -18,9 +18,67 @@ let canvas = Canvas(width: 500, height: 400)
 
 // Draw a circle in the middle of the canvas without a fill
 canvas.drawShapesWithBorders = true
-canvas.drawShapesWithFill = false
+canvas.drawShapesWithFill = true
 canvas.defaultBorderWidth = 5
-canvas.drawEllipse(centreX: canvas.width / 2, centreY: canvas.height / 2 , width: 100, height: 100)
+canvas.fillColor = Color(hue: 195, saturation: 100, brightness: 100, alpha: 100)
+canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: 0, width: 500, height: 400)
+
+
+// Use a loop for sun rays
+canvas.defaultLineWidth = 5
+for x in stride(from: 0, through: 500, by: 50) {
+    
+    //Choose the colour
+    if x % 100 == 0 {
+        canvas.lineColor = Color.yellow
+    } else {
+        canvas.lineColor = Color.orange
+    }
+//    canvas.lineColor = Color.yellow
+    canvas.drawLine(fromX: 0, fromY: 400, toX: x, toY: 0)
+}
+
+for y in stride(from: 0, through: 400, by: 50) {
+    
+    //Choose the colour
+    if y % 100 == 0 {
+        canvas.lineColor = Color.yellow
+    } else {
+        canvas.lineColor = Color.orange
+    }
+    canvas.drawLine(fromX: 0, fromY: 400, toX: 500, toY: y)
+}
+
+canvas.fillColor = Color.yellow
+canvas.drawShapesWithBorders = false
+canvas.drawEllipse(centreX: 0, centreY: 400, width: 100, height: 100)
+
+canvas.fillColor = Color.white
+canvas.drawEllipse(centreX: 450, centreY: 400, width: 100, height: 100)
+canvas.drawEllipse(centreX: 500, centreY: 350, width: 100, height: 100)
+
+canvas.defaultBorderWidth = 25
+canvas.drawShapesWithBorders = true
+canvas.drawShapesWithFill = false
+canvas.borderColor = Color.red
+canvas.drawEllipse(centreX: 250, centreY: 0, width: 475, height: 475)
+
+
+//    canvas.lineColor = Color.orange
+//    canvas.drawLine(fromX: 0, fromY: 400, toX: x - 50, toY: 0)
+//  
+//}
+
+//// Draw Lines
+//canvas.defaultLineWidth = 5
+//canvas.lineColor = Color.yellow
+//canvas.drawLine(fromX: 0, fromY: 400, toX: 0, toY: 0)
+//canvas.lineColor = Color.orange
+//canvas.drawLine(fromX: 0, fromY: 400, toX: 50, toY: 0)
+//canvas.lineColor = Color.yellow
+//canvas.drawLine(fromX: 0, fromY: 400, toX: 100, toY: 0)
+//canvas.lineColor = Color.orange
+//canvas.drawLine(fromX: 0, fromY: 400, toX: 150, toY: 0)
 
 //: ## Template code
 //: The code below is necessary to see the result of your work in the Assistant Editor at right. Please do not remove.
