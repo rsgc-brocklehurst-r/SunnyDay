@@ -61,7 +61,17 @@ canvas.defaultBorderWidth = 25
 canvas.drawShapesWithBorders = true
 canvas.drawShapesWithFill = false
 canvas.borderColor = Color.red
-canvas.drawEllipse(centreX: 250, centreY: 0, width: 475, height: 475)
+canvas.drawEllipse(centreX: 250, centreY: 0, width: 475, height: 400)
+canvas.borderColor = Color.orange
+canvas.drawEllipse(centreX: 250, centreY: 0, width: 425, height: 360)
+canvas.borderColor = Color.yellow
+canvas.drawEllipse(centreX: 250, centreY: 0, width: 375, height: 320)
+canvas.borderColor = Color.green
+canvas.drawEllipse(centreX: 250, centreY: 0, width: 325, height: 280)
+canvas.borderColor = Color.blue
+canvas.drawEllipse(centreX: 250, centreY: 0, width: 275, height: 240)
+canvas.borderColor = Color.purple
+canvas.drawEllipse(centreX: 250, centreY: 0, width: 225, height: 200)
 
 
 //    canvas.lineColor = Color.orange
